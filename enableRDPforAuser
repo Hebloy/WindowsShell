@@ -1,0 +1,2 @@
+psexec \\%1 reg add "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Terminal Server" /v fDenyTSConnections /t REG_DWORD /d 0 /f
+psexec \\%1 net localgroup "Remote Desktop Users" %USERDOMAIN%\%2 /add
