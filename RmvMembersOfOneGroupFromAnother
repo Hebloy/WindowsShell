@@ -1,0 +1,7 @@
+:: Author: Pijush Das
+:: This will remove members present in _rmvgrp from _TargetGrpDN
+
+set _TargetGrpDN="CN=AtestBtarget,OU=Test,OU=GROUPS,DC=Contoso,DC=net"
+set _rmvGrp="CN=Atest,OU=Test,OU=GROUPS,DC=Contoso,DC=net"
+
+dsget group %_rmvGrp% -members | dsmod group %_TargetGrpDN% -rmmbr >> adgd1.log 2>>&1
