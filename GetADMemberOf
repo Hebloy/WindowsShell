@@ -1,0 +1,1 @@
+for /f "delims=@" %%G IN (UserList.txt) DO echo %%G && dsget user %%G -memberof -uc
