@@ -1,0 +1,2 @@
+takeown.exe /f D:\HPSP\* /R /D Y /A
+icacls D:\HPSP /reset /t /c /q
